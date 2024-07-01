@@ -35,7 +35,7 @@ function ProjectsSection() {
           "TypeScript",
           "File System",
       ],
-      githubLink: "#projects",
+      githubLink: "",
       liveDemoLink: "https://thefbamachine.co/",
       image: the_fba_machine,
     },
@@ -44,8 +44,8 @@ function ProjectsSection() {
       description:
         "This project demonstrates the design and implementation of a music streaming application's user interface, inspired by popular platforms like Spotify. The focus was on creating a clean, intuitive and visually appealing interface.",
       technologies: ["Next js", " Tailwind CSS", "Supabase"],
-      githubLink: "#",
-      liveDemoLink: "https://sdt413.github.io/SpotifyClone/",
+      githubLink: "https://github.com/Izakiel81/spotify-clone",
+      liveDemoLink: "https://izakiel81spotify-clone-izakiel81s-projects.vercel.app/",
       image: spotify_clone,
     },
     {
@@ -80,7 +80,7 @@ function ProjectsSection() {
           </p>
         </div>
         {projects.map((project: ProjectData, index: number) => (
-          <ProjectElement project={project} key={index} />
+          <ProjectElement project={project} key={index}/>
         ))}
       </div>
     </div>
