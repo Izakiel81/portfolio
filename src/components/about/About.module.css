@@ -1,0 +1,197 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  background: var(--second-bg-color);
+
+  min-height: 100vh;
+}
+
+.heading {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+.about_img {
+  cursor: pointer;
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.pupil{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000;
+  border-radius: 50%;
+  z-index: 1;
+
+  border: 5px solid #E68600;
+
+  width: 50px;
+  height: 50px;
+
+  transition: opacity .2s ease;
+  opacity: 0;
+}
+
+
+.eyelid {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: #00abf0;
+  transition: transform 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.eyelid.top {
+  top: 0;
+  transform-origin: top;
+}
+
+.eyelid.bottom {
+  bottom: 0;
+  transform-origin: bottom;
+}
+
+.about_img.blink .pupil{
+  opacity: 1;
+}
+.about_img.blink .eyelid.top {
+  transform: scaleY(1);
+}
+
+.about_img.blink .eyelid.bottom {
+  transform: scaleY(1);
+}
+
+.eyelid.top {
+  transform: scaleY(0);
+}
+
+.eyelid.bottom {
+  transform: scaleY(0);
+}
+
+
+.about_img .circle_spin {
+  @apply bg-image-eye bg-no-repeat bg-cover bg-center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-top: 0.2rem solid var(--second-bg-color);
+  border-bottom: 0.2rem solid var(--second-bg-color);
+  border-left: 0.2rem solid var(--main-color);
+  border-right: 0.2rem solid var(--main-color);
+}
+
+.about_content {
+  text-align: center;
+}
+
+.about_content .header3 {
+  font-size: 2.6rem;
+}
+
+.about_content .paragraph {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+.btn_box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 34.5rem;
+  height: 5rem;
+}
+
+.btn_box .btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 100%;
+  background: var(--main-color);
+  border: 0.2rem solid var(--main-color);
+  border-radius: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  color: var(--bg-color);
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn_box .btn:hover {
+  color: var(--main-color);
+}
+
+.btn_box .btn:nth-child(2) {
+  background: transparent;
+  color: var(--main-color);
+}
+
+.btn_box .btn:nth-child(2):hover {
+  color: var(--bg-color);
+}
+
+.btn_box .btn:nth-child(2)::before {
+  background: var(--main-color);
+}
+
+.btn_box .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn_box .btn:hover::before {
+  width: 100%;
+}
+.btn_box.btns {
+  display: inline-block;
+  width: 15rem;
+}
+
+.btn_box.btns .btn::before {
+  background: var(--second-bg-color);
+}
+
+@keyframes blink {
+  0%,
+  5%,
+  10%,
+  50%,
+  55%,
+  100% {
+    transform: scaleY(0);
+  }
+  7.5%,
+  52.5% {
+    transform: scaleY(1);
+  }
+}

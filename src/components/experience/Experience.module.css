@@ -1,0 +1,32 @@
+.container {
+  min-height: 50vh;
+}
+.table_of_columns {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+  margin: 20px 0;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1430px){
+  .table_of_columns {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1024px){
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .table_of_columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+

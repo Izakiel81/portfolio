@@ -1,0 +1,32 @@
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.logo_image{
+  width: 50px;
+  height: 50px;
+  transition: scale 0.3s ease;
+}
+.logo_image:active,
+.logo_image:focus,
+.logo_image:hover {
+  scale: 1.2;
+}
+
+
+#menu_icon {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+
+@media (hover: none) and (pointer: coarse) {
+  .logo_image:hover {
+    scale: 1;
+  }
+  
+}

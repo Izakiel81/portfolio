@@ -1,0 +1,41 @@
+.form {
+ @apply flex flex-col items-center justify-center w-[600px] h-fit rounded-lg shadow-lg;
+ background: var(--second-bg-color);
+ .form_header {
+  @apply text-4xl font-bold text-center mb-14;
+  color: var(--main-color)
+ }
+ .form_body {
+  @apply flex flex-col items-center justify-center w-full gap-4;
+ .form_block {
+    @apply flex justify-between items-center w-full px-4;
+  .form_input {
+   @apply w-2/3 h-12 rounded-lg text-2xl bg-black pt-2 pb-2 pl-2 pr-2 text-white;
+  }
+  .form_textarea {
+   @apply w-2/3 rounded-lg text-2xl bg-black min-h-16 max-h-96 pt-2 pb-2 pl-2 pr-2 text-white;
+  }
+  .form_label {
+   @apply font-bold text-2xl ml-2;
+  }
+ }
+ }
+  .form_footer {
+   @apply flex flex-col items-center justify-center w-full mt-14 mb-4;
+   .form_buttons {
+    @apply flex gap-4;
+    .form_button {
+     @apply text-2xl p-4 rounded-xl bg-black text-white cursor-pointer transition duration-300 ease-in-out;
+    }
+   }
+
+  }
+
+}
+
+
+@media (max-width: 720px) {
+    .form {
+    @apply w-[90%];
+    }
+}

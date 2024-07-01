@@ -1,0 +1,124 @@
+.project_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 200px;
+  }
+  
+  .project_container:nth-child(even) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  
+  .project_img {
+    width: 500px;
+  
+    border-radius: 15px;
+    transition: transform .3s ease;
+
+    object-fit: contain;
+  }
+  
+  .project_img:hover{
+    transform: scale(1.1);
+  }
+  
+  .project_info {
+    color: #fff;
+    text-align: center;
+  
+    width: 500px;
+    word-break: break-word;
+  }
+  
+  .project_title {
+    font: 700 25px/28px Poppins;
+    margin-bottom: 20px;
+  }
+  
+  .project_description {
+    font: 500 18px/22px Poppins;
+  }
+
+  .project_technologies_item{
+    word-spacing: 5px;
+  }
+  
+  .project_technologies {
+    margin: 30px 0;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 25px 55px;
+  
+    font: 900 18px/22px Poppins;
+  
+    color: #fff;
+  }
+  
+  .project_links {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 55px;
+  
+    font: 700 18px/22px Poppins;
+  
+    color: #fff;
+  }
+  
+  .project_link {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  
+    transition: scale 0.3s ease;
+  }
+  
+  .project_link:hover {
+    scale: 1.2;
+  }
+  
+  .project_link_icon_svg {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+  
+  @media (max-width: 1280px) {
+    .projects_container {
+      gap: 50px;
+    }
+    .project_container,
+    .project_container:nth-child(even) {
+      gap: 150px;
+    }
+    .project_img {
+      width: 400px;
+      height: 300px;
+    }
+    .project_info {
+      width: 350px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .projects_container {
+      gap: 40px;
+      padding: 0 15px;
+    }
+    .project_container,
+    .project_container:nth-child(even) {
+      flex-direction: column;
+      align-items: center;
+  
+      gap: 25px;
+    }
+  }
