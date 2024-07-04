@@ -6,13 +6,15 @@ import { useActions } from "@/hooks/useActions";
 import { setTimeout } from "timers";
 import { Observer } from "@/utils/observer";
 import ResumeReaderPopUp from "./resume-reader-pop-up/ResumeReaderPopUp";
+import Link from "next/link";
 
 const About = () => {
   const [isBlinking, setIsBlinking] = useState<boolean>(false);
   const [isAnimated, setIsAnimated] = useState<boolean>(false);
 
   const [isReading, setIsReading] = useState<boolean>(false);
-
+  const path_to_pdf = process.env.NODE_ENV === 'production' ? "/portfolio-next/assets/documents/fullstack.pdf" : "/assets/documents/fullstack.pdf";
+  
   useEffect(() => {
     const body = document.getElementsByTagName("html")[0];
     if (isReading) {
@@ -58,8 +60,22 @@ const About = () => {
       <div className={styles.about_content}>
         <h3 className={styles.header3}>Fullstack Developer</h3>
         <p className={styles.paragraph}>
-          I have 1 year of experience with react, wordpress, node.js, CSS and Tailwind CSS 
+          I have 1 year of experience with react, wordpress, node.js, CSS and
+          Tailwind CSS
         </p>
+        <div className={classNames(styles.btn_box, styles.btns)} ref={cbRef}>
+          <span className={styles.desktop_button}>
+            <button onClick={() => setIsReading(true)} className={styles.btn}>
+              Read More
+            </button>
+          </span>
+
+          <span className={styles.mobile_link}>
+            <Link href={path_to_pdf} target="_blank" download={path_to_pdf}>
+              <button className={styles.btn}>Read More</button>
+            </Link>
+          </span>
+        </div>
       </div>
       {isReading && <ResumeReaderPopUp onClose={() => setIsReading(false)} />}
     </section>

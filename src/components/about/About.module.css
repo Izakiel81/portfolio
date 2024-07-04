@@ -195,3 +195,24 @@
     transform: scaleY(1);
   }
 }
+
+
+.mobile_link {
+  display: none;
+}
+
+.desktop_button {
+
+}
+
+@media (max-width: 768px) {
+  .desktop_button {
+    display: none;
+  }
+.mobile_link {
+  display: block;
+}
+.btn {
+  padding: 0.5rem;
+}
+}
