@@ -65,8 +65,8 @@ function ProjectsSection() {
         "Spring",
         "PostgreSQL",
       ],
-      githubLink: "#",
-      liveDemoLink: "https://sdt413.github.io/CoffeeShop/",
+      githubLink: "https://github.com/Izakiel81/coffee-shop",
+      liveDemoLink: "",
       image: coffee_shop,
     },
   ];
