@@ -16,6 +16,13 @@ const Navbar = () => {
       : (document.getElementsByTagName("html")[0].style.overflow = "hidden");
     setIsExpanded((prev: boolean) => !prev);
   };
+
+  const handleNavigation = (tab: "home" | "about" | "experience" | "projects" | "contact") => {
+    toggleExpansion();
+    setActiveTab(tab);
+  };
+  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 600) {
@@ -43,7 +50,7 @@ const Navbar = () => {
               href="#home"
               className={styles.navbar_link_active}
               onClick={() => {
-                setActiveTab("home");
+                handleNavigation("home");
               }}
           >
             Home
@@ -53,7 +60,7 @@ const Navbar = () => {
               href="#home"
               className={styles.navbar_link}
               onClick={() => {
-                setActiveTab("home");
+                handleNavigation("home");
               }}
             >
                 Home
@@ -65,7 +72,7 @@ const Navbar = () => {
                     href="#about"
                     className={styles.navbar_link_active}
                     onClick={() => {
-                        setActiveTab("about");
+                      handleNavigation("about");
                     }}
                 >
                     About
@@ -75,7 +82,7 @@ const Navbar = () => {
                   href="#about"
                   className={styles.navbar_link}
                   onClick={() => {
-                    setActiveTab("about");
+                    handleNavigation("about");
                   }}
               >
                 About
@@ -87,7 +94,7 @@ const Navbar = () => {
                     href="#experience"
                     className={styles.navbar_link_active}
                     onClick={() => {
-                        setActiveTab("experience");
+                      handleNavigation("experience");
                     }}
                 >
                     Experience
@@ -97,7 +104,7 @@ const Navbar = () => {
                   href="#experience"
                   className={styles.navbar_link}
                   onClick={() => {
-                    setActiveTab("experience");
+                    handleNavigation("experience");
                   }}
               >
                 Experience
@@ -109,7 +116,7 @@ const Navbar = () => {
                   href="#projects"
                   className={styles.navbar_link_active}
                   onClick={() => {
-                    setActiveTab("projects");
+                    handleNavigation("projects");
                   }}
               >
                 Projects
@@ -119,7 +126,7 @@ const Navbar = () => {
                   href="#projects"
                   className={styles.navbar_link}
                   onClick={() => {
-                    setActiveTab("projects");
+                    handleNavigation("projects");
                   }}
               >
                 Projects
@@ -131,7 +138,7 @@ const Navbar = () => {
                   href="#contact"
                   className={styles.navbar_link_active}
                   onClick={() => {
-                    setActiveTab("contact");
+                    handleNavigation("contact");
                   }}
               >
                 Contact
@@ -141,7 +148,7 @@ const Navbar = () => {
                   href="#contact"
                   className={styles.navbar_link}
                   onClick={() => {
-                    setActiveTab("contact");
+                    handleNavigation("contact");
                   }}
               >
                 Contact
@@ -163,7 +170,7 @@ const Navbar = () => {
                     href="#home"
                     className={styles.navbar_link_active}
                     onClick={() => {
-                      setActiveTab("home");
+                      handleNavigation("home");
                     }}
                 >
                   Home
@@ -173,7 +180,7 @@ const Navbar = () => {
                     href="#home"
                     className={styles.navbar_link}
                     onClick={() => {
-                      setActiveTab("home");
+                      handleNavigation("home");
                     }}
                 >
                   Home
@@ -185,7 +192,7 @@ const Navbar = () => {
                     href="#about"
                     className={styles.navbar_link_active}
                     onClick={() => {
-                      setActiveTab("about");
+                      handleNavigation("about");
                     }}
                 >
                   About
@@ -195,7 +202,7 @@ const Navbar = () => {
                     href="#about"
                     className={styles.navbar_link}
                     onClick={() => {
-                      setActiveTab("about");
+                      handleNavigation("about");
                     }}
                 >
                   About
@@ -207,7 +214,7 @@ const Navbar = () => {
                     href="#experience"
                     className={styles.navbar_link_active}
                     onClick={() => {
-                      setActiveTab("experience");
+                      handleNavigation("experience");
                     }}
                 >
                   Experience
@@ -217,7 +224,7 @@ const Navbar = () => {
                     href="#experience"
                     className={styles.navbar_link}
                     onClick={() => {
-                      setActiveTab("experience");
+                      handleNavigation("experience");
                     }}
                 >
                   Experience
@@ -229,7 +236,7 @@ const Navbar = () => {
                     href="#projects"
                     className={styles.navbar_link_active}
                     onClick={() => {
-                      setActiveTab("projects");
+                      handleNavigation("projects");
                     }}
                 >
                   Projects
@@ -239,7 +246,7 @@ const Navbar = () => {
                     href="#projects"
                     className={styles.navbar_link}
                     onClick={() => {
-                      setActiveTab("projects");
+                      handleNavigation("projects");
                     }}
                 >
                   Projects
@@ -251,7 +258,7 @@ const Navbar = () => {
                     href="#contact"
                     className={styles.navbar_link_active}
                     onClick={() => {
-                      setActiveTab("contact");
+                      handleNavigation("contact");
                     }}
                 >
                   Contact
@@ -261,7 +268,7 @@ const Navbar = () => {
                     href="#contact"
                     className={styles.navbar_link}
                     onClick={() => {
-                      setActiveTab("contact");
+                      handleNavigation("contact");
                     }}
                 >
                   Contact
