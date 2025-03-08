@@ -11,10 +11,12 @@ const Navbar = () => {
   const [isExpanded, setIsExpanded] = React.useState<boolean>(false);
 
   const toggleExpansion = () => {
+    if (window.innerWidth < 700) {
     isExpanded
       ? (document.getElementsByTagName("html")[0].style.overflow = "auto")
       : (document.getElementsByTagName("html")[0].style.overflow = "hidden");
     setIsExpanded((prev: boolean) => !prev);
+    }
   };
 
   const handleNavigation = (tab: "home" | "about" | "experience" | "projects" | "contact") => {
@@ -25,7 +27,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 600) {
+      if (window.innerWidth > 700) {
         document.getElementsByTagName("html")[0].style.overflow = "auto";
         setIsExpanded(false);
       }
