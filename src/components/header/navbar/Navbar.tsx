@@ -66,7 +66,7 @@ const Navbar = () => {
                 Home
             </Link>
         }
-        {
+        {/* {
           visual.activeTab === "about" ?
                 <Link
                     href="#about"
@@ -87,7 +87,7 @@ const Navbar = () => {
               >
                 About
               </Link>
-        }
+        } */}
         {
           visual.activeTab === "experience" ?
                 <Link
