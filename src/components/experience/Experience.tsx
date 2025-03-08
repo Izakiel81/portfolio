@@ -15,7 +15,7 @@ const Experience = () => {
     ]
     const experienceData = [
         {
-            date: "September 2023 - June 2024",
+            date: "August 2021 - March 2023",
             heading: "Full-Stack Developer at Daily Distro LLC - USA",
             description: "Developed and maintained the company's website and mobile application. Implemented new features and fixed bugs. Worked with a team of developers to create a new version of the website and mobile application."
         }

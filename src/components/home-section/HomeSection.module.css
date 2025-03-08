@@ -157,7 +157,7 @@
 
 .home_img {
   grid-area: img;
-  @apply bg-image-home bg-no-repeat bg-cover bg-center;
+  @apply bg-image-home bg-no-repeat bg-cover bg-right-top;
   width: 25vw;
   height: 25vw;
   border-radius: 50%;

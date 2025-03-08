@@ -86,7 +86,7 @@
 
 
 .about_img .circle_spin {
-  @apply bg-image-eye bg-no-repeat bg-cover bg-center;
+  @apply bg-image-eye bg-no-repeat bg-cover bg-right-top;
   position: absolute;
   top: 50%;
   left: 50%;

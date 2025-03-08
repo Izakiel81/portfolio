@@ -1,5 +1,6 @@
 .container {
   min-height: 50vh;
+  
 }
 .table_of_columns {
   display: flex;
