@@ -22,13 +22,7 @@ const Experience = () => {
       description:
         "Developed and maintained the organization's website, participated in the development of software for accounting charitable contributions, and provided technical support to staff and volunteers.",
     },
-    {
-      date: "September 2023 - June 2024",
-      heading: "Full-Stack Developer at Daily Distro LLC - USA",
-      description:
-        "Developed and maintained the company's website and mobile application. Implemented new features and fixed bugs. Worked with a team of developers to create a new version of the website and mobile application.",
-    },
-  ];
+ ];
 
   return (
     <div className={styles.container} id="experience" ref={cbRef}>
